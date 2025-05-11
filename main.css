@@ -1,0 +1,526 @@
+/* Основний стиль для body */
+body {
+  /* Фонові градієнти для створення ефекту складного фону */
+  background-image: linear-gradient(56deg, rgba(254, 254, 254, 0.05) 0%, rgba(254, 254, 254, 0.05) 69%,rgba(160, 160, 160, 0.05) 69%, rgba(160, 160, 160, 0.05) 100%),
+                    linear-gradient(194deg, rgba(102, 102, 102, 0.02) 0%, rgba(102, 102, 102, 0.02) 60%,rgba(67, 67, 67, 0.02) 60%, rgba(67, 67, 67, 0.02) 100%),
+                    linear-gradient(76deg, rgba(169, 169, 169, 0.06) 0%, rgba(169, 169, 169, 0.06) 89%,rgba(189, 189, 189, 0.06) 89%, rgba(189, 189, 189, 0.06) 100%),
+                    linear-gradient(326deg, rgba(213, 213, 213, 0.04) 0%, rgba(213, 213, 213, 0.04) 45%,rgba(66, 66, 66, 0.04) 45%, rgba(66, 66, 66, 0.04) 100%),
+                    linear-gradient(183deg, rgba(223, 223, 223, 0.01) 0%, rgba(223, 223, 223, 0.01) 82%,rgba(28, 28, 28, 0.01) 82%, rgba(28, 28, 28, 0.01) 100%),
+                    linear-gradient(3deg, rgba(20, 20, 20, 0.06) 0%, rgba(20, 20, 20, 0.06) 62%,rgba(136, 136, 136, 0.06) 62%, rgba(136, 136, 136, 0.06) 100%),
+                    linear-gradient(200deg, rgba(206, 206, 206, 0.09) 0%, rgba(206, 206, 206, 0.09) 58%,rgba(6, 6, 6, 0.09) 58%, rgba(6, 6, 6, 0.09) 100%),
+                    linear-gradient(304deg, rgba(162, 162, 162, 0.07) 0%, rgba(162, 162, 162, 0.07) 27%,rgba(24, 24, 24, 0.07) 27%, rgba(24, 24, 24, 0.07) 100%),
+                    linear-gradient(186deg, rgba(166, 166, 166, 0.04) 0%, rgba(166, 166, 166, 0.04) 5%,rgba(210, 210, 210, 0.04) 5%, rgba(210, 210, 210, 0.04) 100%),
+                    linear-gradient(90deg, rgb(26,60,118),rgb(32,129,207),rgb(7,128,191)); /* Завершення градієнтів */
+  margin: 0; /* Прибираємо стандартні відступи */
+  padding: 0; /* Прибираємо стандартні відступи */
+  font-family: sans-serif; /* Встановлення шрифта */
+  color: white; /* Колір тексту */
+}
+
+/* Стиль для header */
+header {
+  background-image: url('ChatGPT\ Image\ 2\ трав.\ 2025\ р.\,\ 19_34_03.png'); /* Фонове зображення */
+  background-size: cover; /* Підгонка фону під розмір елементу */
+  background-position: center; /* Встановлення фону по центру */
+  padding: 80px 40px; /* Відступи навколо контенту */
+  display: flex; /* Використовуємо Flexbox для розміщення елементів */
+  flex-direction: column; /* Орієнтація елементів в колонку */
+  height: 650px; /* Висота елемента */
+}
+
+/* Стиль для вмісту в header */
+.header-content {
+  display: flex;
+  flex-direction: column; /* Визначаємо колонкову орієнтацію */
+  max-width: 800px; /* Максимальна ширина */
+  gap: 20px; /* Відстань між елементами */
+}
+
+/* Стиль для заголовку h1 */
+h1 {
+  color: #cca300; /* Колір тексту */
+  font-size: 70px; /* Розмір шрифта */
+  margin: 0; /* Відсутність маргіну */
+  position: absolute; /* Абсолютне позиціювання */
+  left: 250px; /* Відстань від лівого краю */
+  bottom: 650px; /* Відстань від нижнього краю */
+  overflow: hidden; /* Приховуємо все, що виходить за межі */
+  transition: color 1s ease; /* Плавна зміна кольору */
+  border-left: 6px solid #cca300; /* Лінія зліва */
+  display: inline-block; /* Відображення як inline-block */
+  font-family: "Playwrite RO", cursive; /* Шрифт */
+}
+
+/* Анімація для лінії після h1 */
+header h1::after {
+  content: ''; /* Порожній контент для створення лінії */
+  position: absolute; /* Абсолютне позиціювання */
+  top: 0; /* Відстань зверху */
+  left: -100%; /* Початкова позиція лінії */
+  width: 6px; /* Ширина лінії */
+  height: 100%; /* Висота лінії */
+  background-color: #cca300; /* Колір лінії */
+  z-index: 2; /* Порядок відображення */
+  transform: translateX(0); /* Початкове положення */
+}
+
+/* Анімація пролітання лінії */
+header h1:hover::after {
+  animation: slide-through 1s forwards; /* Анімація пролітання */
+}
+
+/* Зміна кольору тексту при наведенні */
+header h1:hover {
+  color:  #991f00; /* Зміна кольору на червоний */
+}
+
+/* Ключові кадри для пролітання лінії */
+@keyframes slide-through {
+  0% {
+    left: 6px; /* Початкове положення лінії */
+  }
+  100% {
+    left: 100%; /* Кінцеве положення лінії */
+  }
+}
+
+/* Стиль для заголовка h2 */
+h2 {
+  font-family: "Playwrite RO", cursive;
+  font-size: 28px; /* Розмір шрифта */
+  margin: 0; /* Відсутність маргіну */
+  position: absolute; /* Абсолютне позиціювання */
+  left: 250px; /* Відстань від лівого краю */
+  bottom: 600px; /* Відстань від нижнього краю */
+}
+
+/* Стиль для параграфа в .header-info */
+.header-info p {
+  font-size: 20px; /* Розмір шрифта */
+  line-height: 1.6; /* Висота рядка */
+  position: absolute; /* Абсолютне позиціювання */
+  left: 250px; /* Відстань від лівого краю */
+  right: 100px; /* Відстань від правого краю */
+  bottom: 450px; /* Відстань від нижнього краю */
+  font-family: "Playwrite RO", cursive; /* Шрифт */
+}
+
+/* Стиль для навігаційного меню */
+nav {
+  display: flex; /* Використовуємо Flexbox для вирівнювання */
+  justify-content: flex-end; /* Вирівнювання елементів вправо */
+  gap: 40px; /* Відстань між елементами */
+  flex-wrap: wrap; /* Перенос елементів на новий рядок */
+  margin-right: 80px; /* Відступ справа */
+  font-family: "Playwrite RO", cursive; /* Шрифт */
+}
+
+/* Стиль для посилань в меню */
+nav a {
+  text-decoration: none; /* Без підкреслення */
+  font-size: 30px; /* Розмір шрифта */
+  color: #cca300; /* Колір тексту */
+  transition: color 0.3s ease; /* Плавна зміна кольору */
+}
+
+/* Зміна кольору посилання при наведенні */
+nav a:hover {
+  color: #ffcc00; /* Яскраво-жовтий колір */
+}
+
+/* Стиль для основного контенту */
+main {
+  padding: 40px; /* Відступи */
+}
+
+/* Стиль для заголовку h3 */
+main h3 {
+  font-size: 36px; /* Розмір шрифта */
+  color: #cca300; /* Колір тексту */
+  display: inline-block; /* Відображення як inline-block */
+  position: relative; /* Позиціонування */
+  left:100px; /* Відстань зліва */
+  overflow: hidden; /* Приховуємо все, що виходить за межі */
+  transition: color 1s ease; /* Плавна зміна кольору */
+  border-left: 6px solid #cca300; /* Лінія зліва */
+  font-family: "Playwrite RO", cursive; /* Шрифт */
+}
+
+/* Лінія для h3 */
+main h3::after {
+  content: ''; /* Порожній контент для лінії */
+  position: absolute; /* Абсолютне позиціювання */
+  top: 0; /* Відстань зверху */
+  left: -100%; /* Початкове положення лінії */
+  width: 6px; /* Ширина лінії */
+  height: 100%; /* Висота лінії */
+  background-color: #cca300; /* Колір лінії */
+  z-index: 2; /* Порядок відображення */
+  transform: translateX(0); /* Початкове положення */
+}
+
+/* Анімація для пролітання лінії у h3 */
+main h3:hover::after {
+  animation: slide-through 1s forwards; /* Анімація пролітання */
+}
+
+/* Зміна кольору тексту при наведенні у h3 */
+main h3:hover {
+  color:  #991f00; /* Зміна кольору на червоний */
+}
+
+/* Ключові кадри для пролітання лінії */
+@keyframes slide-through {
+  0% {
+    left: 6px; /* Початкове положення */
+  }
+  100% {
+    left: 100%; /* Кінцеве положення */
+  }
+}
+
+/* Стиль для заголовку h6 */
+main h6 {
+  font-size: 36px; /* Розмір шрифта */
+  color: #cca300; /* Колір тексту */
+  display: inline-block; /* Відображення як inline-block */
+  position: relative; /* Позиціонування */
+  left:100px; /* Відстань зліва */
+  overflow: hidden; /* Приховуємо все, що виходить за межі */
+  transition: color 1s ease; /* Плавна зміна кольору */
+  border-left: 6px solid #cca300; /* Лінія зліва */
+  font-family: "Playwrite RO", cursive; /* Шрифт */
+}
+
+/* Лінія */
+main h6::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 6px;
+  height: 100%;
+  background-color: #cca300;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+/* Анімація при наведенні */
+main h6:hover::after {
+  animation: slide-through 1s forwards;
+}
+
+/* Зміна кольору тексту */
+main h6:hover {
+  color:  #991f00;
+}
+
+/* Ключові кадри для пролітання */
+@keyframes slide-through {
+  0% {
+    left: 6px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Секція для елементу .info-hakaton - фон з лінійними градієнтами */
+.info-hakaton{
+  /* Множинні градієнти для створення складного фону */
+  background-image: linear-gradient(126deg, rgba(94, 94, 94, 0.02) 0%, rgba(94, 94, 94, 0.02) 12%, rgba(20, 20, 20, 0.02) 12%, rgba(20, 20, 20, 0.02) 67%, rgba(98, 98, 98, 0.02) 67%, rgba(98, 98, 98, 0.02) 76%, rgba(247, 247, 247, 0.02) 76%, rgba(247, 247, 247, 0.02) 91%, rgba(44, 44, 44, 0.02) 91%, rgba(44, 44, 44, 0.02) 100%),
+  linear-gradient(133deg, rgba(251, 251, 251, 0.02) 0%, rgba(251, 251, 251, 0.02) 33%, rgba(132, 132, 132, 0.02) 33%, rgba(132, 132, 132, 0.02) 43%, rgba(248, 248, 248, 0.02) 43%, rgba(248, 248, 248, 0.02) 58%, rgba(19, 19, 19, 0.02) 58%, rgba(19, 19, 19, 0.02) 89%, rgba(43, 43, 43, 0.02) 89%, rgba(43, 43, 43, 0.02) 100%),
+  linear-gradient(56deg, rgba(4, 4, 4, 0.02) 0%, rgba(4, 4, 4, 0.02) 29%, rgba(242, 242, 242, 0.02) 29%, rgba(242, 242, 242, 0.02) 33%, rgba(38, 38, 38, 0.02) 33%, rgba(38, 38, 38, 0.02) 57%, rgba(138, 138, 138, 0.02) 57%, rgba(138, 138, 138, 0.02) 99%, rgba(210, 210, 210, 0.02) 99%, rgba(210, 210, 210, 0.02) 100%),
+  linear-gradient(114deg, rgba(122, 122, 122, 0.02) 0%, rgba(122, 122, 122, 0.02) 45%, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.02) 58%, rgba(66, 66, 66, 0.02) 58%, rgba(66, 66, 66, 0.02) 68%, rgba(103, 103, 103, 0.02) 68%, rgba(103, 103, 103, 0.02) 84%, rgba(130, 130, 130, 0.02) 84%, rgba(130, 130, 130, 0.02) 100%),
+  linear-gradient(72deg, rgba(84, 84, 84, 0.02) 0%, rgba(84, 84, 84, 0.02) 1%, rgba(241, 241, 241, 0.02) 1%, rgba(241, 241, 241, 0.02) 12%, rgba(90, 90, 90, 0.02) 12%, rgba(90, 90, 90, 0.02) 15%, rgba(92, 92, 92, 0.02) 15%, rgba(92, 92, 92, 0.02) 54%, rgba(134, 134, 134, 0.02) 54%, rgba(134, 134, 134, 0.02) 100%),
+  linear-gradient(90deg, rgb(8, 8, 8), rgb(220, 220, 220));
+  
+  /* Розміри та стилі контейнера */
+  width: 1250px;
+  height: 560px;
+  border-radius: 50px;
+  margin-left: 75px;
+  font-family: "Playwrite RO", cursive;
+}
+
+/* Секція для елементу .vedma-info - позиціонування елементу */
+.vedma-info{
+  position: relative;
+  left: 1300px;
+  bottom: 600px;
+  width: 400px;
+  height: 560px;
+}
+
+/* Секція для списків (ul) */
+ul{
+  font-size: 30px; /* Розмір шрифту */
+  line-height: 1.8; /* Висота рядка */
+  margin: 50px; /* Відступи */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Заголовок h4 - стилізація */
+h4{
+  text-align: center; /* Центрування тексту */
+  font-size: 40px; /* Розмір шрифту */
+  color: #cca300; /* Колір шрифту */
+}
+
+/* Секція для ряду елементів (row) */
+.row {
+  display: flex; /* Використовуємо flexbox для розміщення */
+  justify-content: center; /* Центруємо по горизонталі */
+  gap: 40px; /* Простір між елементами */
+  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий ряд */
+  margin-bottom: 30px;
+}
+
+/* Стилізація карток героїв (hero-card) */
+.hero-card {
+  height: 350px;
+  width: 250px;
+ background-image: linear-gradient(323deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 16.667%,rgba(46, 46, 46, 0.01) 16.667%, rgba(46, 46, 46, 0.01) 33.334%,rgba(226, 226, 226, 0.01) 33.334%, rgba(226, 226, 226, 0.01) 50.001000000000005%,rgba(159, 159, 159, 0.01) 50.001%, rgba(159, 159, 159, 0.01) 66.668%,rgba(149, 149, 149, 0.01) 66.668%, rgba(149, 149, 149, 0.01) 83.33500000000001%,rgba(43, 43, 43, 0.01) 83.335%, rgba(43, 43, 43, 0.01) 100.002%),linear-gradient(346deg, rgba(166, 166, 166, 0.03) 0%, rgba(166, 166, 166, 0.03) 25%,rgba(240, 240, 240, 0.03) 25%, rgba(240, 240, 240, 0.03) 50%,rgba(121, 121, 121, 0.03) 50%, rgba(121, 121, 121, 0.03) 75%,rgba(40, 40, 40, 0.03) 75%, rgba(40, 40, 40, 0.03) 100%),linear-gradient(347deg, rgba(209, 209, 209, 0.01) 0%, rgba(209, 209, 209, 0.01) 25%,rgba(22, 22, 22, 0.01) 25%, rgba(22, 22, 22, 0.01) 50%,rgba(125, 125, 125, 0.01) 50%, rgba(125, 125, 125, 0.01) 75%,rgba(205, 205, 205, 0.01) 75%, rgba(205, 205, 205, 0.01) 100%),linear-gradient(84deg, rgba(195, 195, 195, 0.01) 0%, rgba(195, 195, 195, 0.01) 14.286%,rgba(64, 64, 64, 0.01) 14.286%, rgba(64, 64, 64, 0.01) 28.572%,rgba(67, 67, 67, 0.01) 28.572%, rgba(67, 67, 67, 0.01) 42.858%,rgba(214, 214, 214, 0.01) 42.858%, rgba(214, 214, 214, 0.01) 57.144%,rgba(45, 45, 45, 0.01) 57.144%, rgba(45, 45, 45, 0.01) 71.42999999999999%,rgba(47, 47, 47, 0.01) 71.43%, rgba(47, 47, 47, 0.01) 85.71600000000001%,rgba(172, 172, 172, 0.01) 85.716%, rgba(172, 172, 172, 0.01) 100.002%),linear-gradient(73deg, rgba(111, 111, 111, 0.03) 0%, rgba(111, 111, 111, 0.03) 16.667%,rgba(202, 202, 202, 0.03) 16.667%, rgba(202, 202, 202, 0.03) 33.334%,rgba(57, 57, 57, 0.03) 33.334%, rgba(57, 57, 57, 0.03) 50.001000000000005%,rgba(197, 197, 197, 0.03) 50.001%, rgba(197, 197, 197, 0.03) 66.668%,rgba(97, 97, 97, 0.03) 66.668%, rgba(97, 97, 97, 0.03) 83.33500000000001%,rgba(56, 56, 56, 0.03) 83.335%, rgba(56, 56, 56, 0.03) 100.002%),linear-gradient(132deg, rgba(88, 88, 88, 0.03) 0%, rgba(88, 88, 88, 0.03) 20%,rgba(249, 249, 249, 0.03) 20%, rgba(249, 249, 249, 0.03) 40%,rgba(2, 2, 2, 0.03) 40%, rgba(2, 2, 2, 0.03) 60%,rgba(185, 185, 185, 0.03) 60%, rgba(185, 185, 185, 0.03) 80%,rgba(196, 196, 196, 0.03) 80%, rgba(196, 196, 196, 0.03) 100%),linear-gradient(142deg, rgba(160, 160, 160, 0.03) 0%, rgba(160, 160, 160, 0.03) 12.5%,rgba(204, 204, 204, 0.03) 12.5%, rgba(204, 204, 204, 0.03) 25%,rgba(108, 108, 108, 0.03) 25%, rgba(108, 108, 108, 0.03) 37.5%,rgba(191, 191, 191, 0.03) 37.5%, rgba(191, 191, 191, 0.03) 50%,rgba(231, 231, 231, 0.03) 50%, rgba(231, 231, 231, 0.03) 62.5%,rgba(70, 70, 70, 0.03) 62.5%, rgba(70, 70, 70, 0.03) 75%,rgba(166, 166, 166, 0.03) 75%, rgba(166, 166, 166, 0.03) 87.5%,rgba(199, 199, 199, 0.03) 87.5%, rgba(199, 199, 199, 0.03) 100%),linear-gradient(238deg, rgba(116, 116, 116, 0.02) 0%, rgba(116, 116, 116, 0.02) 20%,rgba(141, 141, 141, 0.02) 20%, rgba(141, 141, 141, 0.02) 40%,rgba(152, 152, 152, 0.02) 40%, rgba(152, 152, 152, 0.02) 60%,rgba(61, 61, 61, 0.02) 60%, rgba(61, 61, 61, 0.02) 80%,rgba(139, 139, 139, 0.02) 80%, rgba(139, 139, 139, 0.02) 100%),linear-gradient(188deg, rgba(227, 227, 227, 0.01) 0%, rgba(227, 227, 227, 0.01) 20%,rgba(105, 105, 105, 0.01) 20%, rgba(105, 105, 105, 0.01) 40%,rgba(72, 72, 72, 0.01) 40%, rgba(72, 72, 72, 0.01) 60%,rgba(33, 33, 33, 0.01) 60%, rgba(33, 33, 33, 0.01) 80%,rgba(57, 57, 57, 0.01) 80%, rgba(57, 57, 57, 0.01) 100%),linear-gradient(90deg, hsl(237,0%,13%),hsl(237,0%,13%));
+  padding: 15px;
+  border-radius: 10px; /* Закруглення країв */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Тінь */
+  text-align: center; /* Центрування тексту */
+}
+
+/* Ефект при наведенні на картку героя */
+.hero-card:hover{
+  box-shadow: 1px 1px 10px 10px black; /* Тінь стає більш виразною */
+}
+
+/* Стилізація зображення в картці героя */
+.hero-card img {
+  width: 200px;
+  height: 250px;
+  border-radius: 6px; /* Закруглені кути */
+  margin-bottom: 10px;
+}
+
+/* Стилізація заголовка в картці героя */
+.hero-card h5 {
+  position: relative;
+  margin: 10px 0 5px;
+  color: #ffb700; /* Колір тексту */
+  font-family: "Playwrite RO", cursive;
+}
+
+/* Стилізація параграфа в картці героя */
+.hero-card p {
+  position: relative;
+  font-size: 16px;
+  color: #ccc; /* Колір тексту */
+  font-family: "Playwrite RO", cursive;
+}
+
+/* Секція карти (map) */
+.map{
+  background-image: url('https://bogatyr.club/uploads/posts/2023-03/23451/1678845427_bogatyr-club-p-starii-stol-fon-foni-oboi-1.jpg'); /* Фон карти */
+  width: 100%;
+  height: 895px;
+  border-radius: 50px; /* Закруглені кути */
+}
+
+/* Кнопки на карті (map-bth) */
+.map-bth{
+  display: flex;
+  justify-content: center; /* Центруємо кнопки по горизонталі */
+}
+
+/* Стилізація зображень у кнопках карти */
+.map-bth img{
+  border-radius: 50px; /* Закруглені кути для зображень */
+}
+
+/* Кнопки для рівнів 1 */
+.level-1 .bth-1{
+  position: relative;
+  left: 605px; /* Відступ зліва */
+  bottom:580px; /* Відступ знизу */
+  border-radius: 10px; /* Закруглені кути */
+  height: 30px; /* Висота кнопки */
+  width: 80px; /* Ширина кнопки */
+  background-color: transparent; /* Прозорий фон */
+  border: none; /* Без рамки */
+  font-size: 20px; /* Розмір шрифта */
+}
+
+/* Зображення для рівня 1 */
+.level-1 img{
+  width: 50px; /* Ширина зображення */
+  height: 50px; /* Висота зображення */
+  position: relative;
+  left:674px; /* Відступ зліва */
+  bottom:593px; /* Відступ знизу */
+}
+
+/* Кнопки для рівня 2 */
+.level-2 .bth-2{
+  position: relative;
+  left: 445px;
+  bottom:480px;
+  border-radius: 10px;
+  height: 30px;
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+/* Зображення для рівня 2 */
+.level-2 img{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 515px;
+  bottom:490px;
+}
+
+/* Кнопки для рівня 3 */
+.level-3 .bth-3{
+  position: relative;
+  left: 485px;
+  bottom:290px;
+  border-radius: 10px;
+  height: 30px;
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+/* Зображення для рівня 3 */
+.level-3 img{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 550px;
+  bottom:305px;
+}
+
+/* Кнопки для рівня 4 */
+.level-4 .bth-4{
+  position: relative;
+  left: 735px;
+  bottom:430px;
+  border-radius: 10px;
+  height: 30px;
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color:black;
+}
+
+
+/* Зображення для рівня 4 */
+.level-4 img{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 806px;
+  bottom: 445px;
+}
+
+/* Модальне вікно, яке активується при натисканні на чекбокс */
+.modal-toggle {
+  display: none; /* Початково приховано */
+}
+
+/* Саме модальне вікно */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* Прозорий чорний фон */
+  display: none; /* Приховано за замовчуванням */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Над іншими елементами */
+}
+
+/* Відображення модального вікна при активному чекбоксі */
+.modal-toggle:checked + label + .modal {
+  display: flex; /* Показати модальне вікно */
+}
+
+/* Вміст модального вікна */
+.modal-content {
+background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),rgb(228, 228, 228)); background-blend-mode:overlay,overlay,overlay,normal;
+  padding: 20px;
+  border-radius: 15px;
+  width: 600px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease; /* Анімація появи */
+  color:black;
+}
+
+/* Кнопка закриття модального вікна */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Анімація для модального вікна */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Стиль тексту рівня */
+.txt-level{
+  font-size: 25px;
+  color:#000;
+}
+
+/* Кнопка для старту квесту */
+.start-kvest{
+  position: relative;
+  top:80px;
+  text-decoration: none;
+  font-size: 30px;
+  color:black;
+  background-color: #ffb700; /* Колір фону кнопки */
+  font-size: 25px;
+  width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+}
+
+/* Ховер-ефект для кнопки старту квесту */
+.start-kvest:hover{
+  box-shadow: 1px 1px 10px 10px #ffb700;
+}
+
+/* Друга кнопка для старту квесту */
+.start-kvest-two{
+  position: relative;
+  top:70px;
+  text-decoration: none;
+  font-size: 30px;
+  color:black;
+  background-color: #ffb700;
+  font-size: 25px;
+  width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+}
+
+/* Ховер-ефект для другої кнопки старту квесту */
+.start-kvest-two:hover{
+  box-shadow: 1px 1px 10px 10px #ffb700;
+}
